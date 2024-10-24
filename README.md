@@ -2,7 +2,7 @@
 
 This repository implements AFU, the algorithm introduced in the paper:
 
-**"AFU: Actor-Free critic Updates in off-policy RL for continuous control"**, Nicolas Perrin-Gilbert
+**"AFU: Actor-Free critic Updates in off-policy RL for continuous control"**, *Nicolas Perrin-Gilbert*
 ([https://arxiv.org/html/2404.16159v1](https://arxiv.org/html/2404.16159v1)).
 
 The code is based on a fork of [Rljax](https://github.com/toshikwa/rljax).
