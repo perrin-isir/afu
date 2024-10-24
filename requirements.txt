@@ -1,0 +1,8 @@
+joblib
+numpy
+pandas
+jax
+optax
+dm-haiku
+gymnasium
+mujoco
