@@ -15,7 +15,7 @@ Install with:
 
 Then run with:
 
-    python simple_train --env [ENV] --algo [ALGO] --param [PARAM]
+    python simple_train.py --env [ENV] --algo [ALGO] --param [PARAM]
 
 where:
 
