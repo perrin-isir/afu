@@ -7,10 +7,10 @@ def run(args):
     import jax
     if args.cpu:
         jax.config.update("jax_platform_name", "cpu")
-        platform = jax.lib.xla_bridge.get_backend().platform
+        platform = jax.devices()[0].platform
         print("platform:", platform)
     else:
-        platform = jax.lib.xla_bridge.get_backend().platform
+        platform = jax.devices()[0].platform
         print("platform:", platform)
         assert platform == "gpu", \
             "JAX is not running on GPU."
