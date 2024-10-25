@@ -25,7 +25,7 @@ where:
 * \[ALGO\] can be "AFU-alpha", "AFU-beta", "SAC", "TD3", "IQL", "SQL", or "EQL".
 * \[PARAM\] is a float between 0 and 1.
 
-If \[ALGO\] is "AFU-alpha" or "AFU-beta", \[PARAM\] corresponds to $\varrho$ (see the [paper](https://arxiv.org/html/2404.16159v1)).
+If \[ALGO\] is "AFU-alpha" or "AFU-beta", \[PARAM\] corresponds to $\varrho$ (see the [paper](https://arxiv.org/html/2404.16159v1)). 0.2 or 0.3 are usually good values.
 
 If \[ALGO\] is "IQL", \[PARAM\] corresponds to $\tau$, the expectile parameter of IQL (see [https://arxiv.org/abs/2110.06169](https://arxiv.org/abs/2110.06169)).
 
