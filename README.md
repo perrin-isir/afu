@@ -1,19 +1,21 @@
-# afu
+# AFU
 
-This repository implements AFU, the algorithm introduced in the paper:
+This repository implements AFU, the algorithm introduced in the following paper:
 
-**"AFU: Actor-Free critic Updates in off-policy RL for continuous control"**, *Nicolas Perrin-Gilbert*
+**"AFU: Actor-Free critic Updates in off-policy RL for continuous control"**, by *Nicolas Perrin-Gilbert*
 ([https://arxiv.org/html/2404.16159v1](https://arxiv.org/html/2404.16159v1)).
 
 The code is based on a fork of [Rljax](https://github.com/toshikwa/rljax).
 
 ## INSTRUCTIONS
 
-Install with:
+Make sure you have properly installed JAX, see [https://jax.readthedocs.io/en/latest/installation.html](https://jax.readthedocs.io/en/latest/installation.html).
+
+Then, install *afu-rljax*:
 
     pip install -e .
 
-Then run with:
+Finally, you can start a training with:
 
     python simple_train.py --env [ENV] --algo [ALGO] --param [PARAM]
 
