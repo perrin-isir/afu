@@ -3,7 +3,7 @@
 This repository implements AFU, the algorithm introduced in the following paper:
 
 **"AFU: Actor-Free critic Updates in off-policy RL for continuous control"**, by *Nicolas Perrin-Gilbert*
-([https://arxiv.org/html/2404.16159v1](https://arxiv.org/html/2404.16159v1)).
+([https://arxiv.org/abs/2404.16159](https://arxiv.org/abs/2404.16159)).
 
 A brief description of the paper's contributions can be found on this poster: [afu_poster.pdf](https://github.com/perrin-isir/afu/blob/main/afu_poster.pdf).
 
