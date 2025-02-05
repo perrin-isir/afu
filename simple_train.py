@@ -9,7 +9,7 @@ algos = {"SAC": "train_sac.py", "TD3": "train_td3.py",
          "SQL": "train_afu.py", "EQL": "train_afu.py"}
 commands = []
 
-def get_command(algo, env, rho=0.2, variant="alpha", hyperparam=1.):
+def get_command(algo, env, rho=0.2, variant="alpha", hyperparam=1., cpu_option=False):
     output_list = [os.path.join(".", "trainers", algos[algo])]
     if algo == "AFU":
         agent_name = algo + "_" + str(rho)
@@ -36,6 +36,8 @@ def get_command(algo, env, rho=0.2, variant="alpha", hyperparam=1.):
         output_list.append(algo)
         output_list.append("--hyperparam")
         output_list.append(str(hyperparam))
+    if cpu_option:
+        output_list.append("--cpu")
     return output_list
 
 if __name__ == "__main__":
@@ -43,6 +45,7 @@ if __name__ == "__main__":
     p.add_argument("--env", type=str, default="Ant")
     p.add_argument("--algo", type=str, default="AFU-alpha")
     p.add_argument("--param", type=float, default=0.2)
+    p.add_argument("--cpu", action="store_true", default=False)
     arguments = p.parse_args()
 
     assert arguments.env in [
@@ -78,7 +81,8 @@ if __name__ == "__main__":
         arguments.env,
         rho=rho,
         variant="alpha",
-        hyperparam=hyperparam)
+        hyperparam=hyperparam,
+        cpu_option=arguments.cpu)
 
     print(' '.join(command_list))
     subprocess.run(
